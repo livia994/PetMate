@@ -1,11 +1,24 @@
-// Find Your Pet The Perfect Mate
+
+/* Sign up 
+.acum{
 color: #453837;
+ font-size: 60px;
+ font-family: Cagliostro;
+ font-weight: 400;
+ line-height: 87px;
+ word-wrap: break-word
+}
+
+
+Find Your Pet The Perfect Mate
+ color: #453837;
  font-size: 64px;
  font-family: Cagliostro;
  font-weight: 400;
  word-wrap: break-word
----
-// Searching for the perfect mate for your cherished pets? Look no further! PetMate is the ultimate web application designed to help pet owners find the ideal companion for their precious furry friends. <br/>With PetMate, finding a suitable match for your pet has never been easier. Just create a profile for your adorable companion, mentioning their breed, age, and unique personality traits. Our intelligent algorithm will then analyze the database for compatible matches, ensuring we find your pet the perfect mate! 
+ 
+Searching for the perfect mate for your cherished pets? Look no further! PetMate is the ultimate web application designed to help pet owners find the ideal companion for their precious furry friends. <br/>With PetMate, finding a suitable match for your pet has never been easier. Just create a profile for your adorable companion, mentioning their breed, age, and unique personality traits. Our intelligent algorithm will then analyze the database for compatible matches, ensuring we find your pet the perfect mate! 
+
 color: #453837;
  font-size: 30px;
  font-family: Cagliostro;
@@ -13,27 +26,74 @@ color: #453837;
  word-wrap: break-word
    text-align: justify;
   text-justify: inter-word;
----
-// Log in
+
+
+Log in
 color: #453837;
  font-size: 60px;
  font-family: Cagliostro;
  font-weight: 400;
  line-height: 87px;
  word-wrap: break-word
----
-// Home
+
+
+ Home 
 color: #453837;
  font-size: 40px;
  font-family: Cagliostro;
  font-weight: 400;
  line-height: 87px;
  word-wrap: break-word
----
-// Sign up
-color: #453837;
- font-size: 60px;
- font-family: Cagliostro;
- font-weight: 400;
- line-height: 87px;
- word-wrap: break-word
+*/
+
+
+
+.btn {
+font-family: "Roboto", sans-serif;
+font-size:18px;
+font-weight: bold;
+background: #ee9db0;
+width: 160px;
+padding: 20px;
+text-align: center;
+text-decoration: none;
+text-transform: uppercase;
+color:#453837;
+border-radius: 5px;
+cursor: pointer;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+-webkit-transition-duration: 0.3s;
+transition-duration: 0.3s;
+-webkit-transition-property: box-shadow, transform;
+transition-property: box-shadow, transform;
+}
+ .btn:hover, .btn:focus, .btn:active{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform:scale(1.1);
+ }
+
+ .btn_2 {
+font-family: "Roboto", sans-serif;
+font-size:18px;
+font-weight: bold;
+background: #ee9db0;
+width: 160px;
+padding: 20px;
+text-align: center;
+text-decoration: none;
+text-transform: uppercase;
+color:#453837;
+border-radius: 5px;
+cursor: pointer;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+-webkit-transition-duration: 0.3s;
+transition-duration: 0.3s;
+-webkit-transition-property: box-shadow, transform;
+transition-property: box-shadow, transform;
+}
+ .btn:hover, .btn:focus, .btn:active{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform:scale(1.1);
+ }
