@@ -1,0 +1,22 @@
+.image-upload-container {
+    text-align: center;
+    margin: 20px;
+}
+.image-upload-container input[type="file"] {
+    display: none;
+}
+.image-upload-label {
+    background-color: #ea8de7;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.image-upload-label:hover {
+    background-color: #ea8de7;
+}
+.uploaded-image {
+    max-width: 100%;
+    margin: 20px auto;
+    display: block;
+}
