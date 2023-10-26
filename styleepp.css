@@ -20,3 +20,26 @@
     margin: 20px auto;
     display: block;
 }
+
+/* Stilurile personalizate pentru buton */
+/* Custom styles for all buttons */
+.btn-custom {
+    background-color: #ea8de7; /* Set the desired color (#ea8de7) for the buttons */
+    color: white; /* White text color */
+    border: none;
+    /* Other styles, such as margin, padding, font-size, etc. */
+
+    /* Override the :hover state to maintain the custom color on hover */
+    &:hover {
+        background-color: #ea8de7; /* Set the same color on hover to maintain the custom color */
+        /* Other hover styles, if needed */
+    }
+
+    /* Override the active state to maintain the custom color on click */
+    &:active, &:focus {
+        background-color: #ea8de7; /* Set the same color on click to maintain the custom color */
+        /* Other active/focus styles, if needed */
+    }
+}
+
+

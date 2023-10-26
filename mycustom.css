@@ -70,7 +70,7 @@ div.container {
 }
 
 .profile-link {
-    background-color: #FF69B4; /* Roz */
+    background-color: #FF69B4;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -82,7 +82,7 @@ div.container {
 }
 
 .profile-link:hover {
-    background-color: #FF1493; /* Roz mai închis la hover */
+    background-color: #FF1493;
 }
 .image-upload-container {
     text-align: center;
@@ -92,18 +92,27 @@ div.container {
     display: none;
 }
 .image-upload-label {
-    background-color: #3498db;
+    background-color: #e384e0;
     color: #fff;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
 }
 .image-upload-label:hover {
-    background-color: #2980b9;
+    background-color: #e550f1;
 }
 .uploaded-image {
     max-width: 100%;
     margin: 20px auto;
     display: block;
 }
+.profile-link {
+    color: inherit;
+    text-decoration: none;
 
+}
+
+
+.profile-link:hover {
+    color: white;
+}

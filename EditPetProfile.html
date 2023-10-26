@@ -11,8 +11,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styleeep.css">
-    <title>Edit Rubrics with Pop-ups</title>
+    <link rel="stylesheet" href="/styleepp.css">
+    <title>Edit Pet Profile</title>
     <style>
         .rubric-editable {
             border: 1px solid #ccc;
@@ -22,6 +22,7 @@
             cursor: pointer;
         }
     </style>
+
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -66,208 +67,103 @@
         </div>
     </div>
 </nav>
+<style>
+    .btn {
+        background-color: #ea8de7;
+    }
+</style>
 <div class="container mt-5">
-        <div class="display-5 text-center"  style="font-family: cursive; color: rgb(234, 141, 231)">Edit your Pet's information</div>
-      <hr>
-<div class="row">
-        <div class="col-md-6">
-            <div class="text-center">
-            <div class="col-md-6">
-            <div class="rubric-editable" contenteditable="true" onclick="clearText(this)" data-bs-toggle="modal" data-bs-target="#nameModal">Change Pet's Name</div>
-            <div class="rubric-editable" contenteditable="true" onclick="clearText(this)" data-bs-toggle="modal" data-bs-target="#breedModal">Change Breed</div>
-            <div class="rubric-editable" contenteditable="true" onclick="clearText(this)" data-bs-toggle="modal" data-bs-target="#breedModal">Change Gender</div>
-            <div class="rubric-editable" contenteditable="true" onclick="clearText(this)" data-bs-toggle="modal" data-bs-target="#ageModal">Change Age</div>
-            <div class="rubric-editable" contenteditable="true" onclick="clearText(this)" data-bs-toggle="modal" data-bs-target="#personalityModal">Change Personality</div>
-            <div class="rubric-editable" contenteditable="true" onclick="clearText(this)" data-bs-toggle="modal" data-bs-target="#hobbiesModal">Change Hobbies</div>
-            <div class="rubric-editable" contenteditable="true" onclick="clearText(this)" data-bs-toggle="modal" data-bs-target="#treatModal">Change Favorite Treat</div>
-                </div>
-                <div>
-        </div>
-    </div>
-</div>
-    <div class="col-md-6">
-        <img src="img/pic.jpg" alt="Family" class="img-fluid">
-    </div>
-<!-- Modals -->
-<div class="modal fade" id="nameModal" tabindex="-1" aria-labelledby="nameModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="nameModalLabel">Edit Pet's Name</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <input type="text" class="form-control" id="petNameInput" placeholder="Enter new name">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="updateText('petNameInput', 'Change Pet\'s Name')">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Add similar modals for other rubrics here -->
-<div class="modal fade" id="breedModal" tabindex="-1" aria-labelledby="breedModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="breedModalLabel">Edit Breed</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <input type="text" class="form-control" id="petBreedInput" placeholder="Enter new breed">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="updateText('petBreedInput', 'Change Breed')">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
-    <!-- Modal for "Change Gender" -->
-    <div class="modal fade" id="genderModal" tabindex="-1" aria-labelledby="genderModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="genderModalLabel">Edit Gender</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="genderRadio" id="maleOption" value="Male">
-                        <label class="form-check-label" for="maleOption">
-                            Male
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="genderRadio" id="femaleOption" value="Female">
-                        <label class="form-check-label" for="femaleOption">
-                            Female
-                        </label>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="updateGender('genderRadio')">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Modal for "Change Age" -->
-<div class="modal fade" id="ageModal" tabindex="-1" aria-labelledby="ageModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="ageModalLabel">Edit Age</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <input type="text" class="form-control" id="petAgeInput" placeholder="Enter new age">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="updateText('petAgeInput', 'Change Age')">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Modal for "Change Personality" -->
-<div class="modal fade" id="personalityModal" tabindex="-1" aria-labelledby="personalityModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="personalityModalLabel">Edit Personality</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <input type="text" class="form-control" id="petPersonalityInput" placeholder="Enter new personality">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="updateText('petPersonalityInput', 'Change Personality')">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Modal for "Change Hobbies" -->
-<div class="modal fade" id="hobbiesModal" tabindex="-1" aria-labelledby="hobbiesModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class "modal-header">
-            <h5 class="modal-title" id="hobbiesModalLabel">Edit Hobbies</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <input type="text" class="form-control" id="petHobbiesInput" placeholder="Enter new hobbies">
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="updateText('petHobbiesInput', 'Change Hobbies')">Save changes</button>
-        </div>
-    </div>
-</div>
-</div>
-<!-- Modal for "Change Favorite Treat" -->
-<div class="modal fade" id="treatModal" tabindex="-1" aria-labelledby="treatModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="treatModalLabel">Edit Favorite Treat</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <input type="text" class="form-control" id="petTreatInput" placeholder="Enter new favorite treat">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="updateText('petTreatInput', 'Change Favorite Treat')">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    function clearText(element) {
-        element.textContent = "";
-    }
-
-    function updateText(inputId, targetElementId) {
-        const input = document.getElementById(inputId);
-        const targetElement = document.querySelector(`[data-bs-target="#${inputId}"]`);
-        targetElement.textContent = input.value;
-    }
-</script>
-
-    <div class="display-6 text-center"  style="font-family: cursive; color: rgb(234, 141, 231)">Add a new photo of your pet!</div>
+    <div class="display-5 text-center"  style="font-family: cursive; color: rgb(234, 141, 231)">Edit your Pet's information</div>
     <hr>
-    <div class="image-upload-container">
-        <label class="image-upload-label" for="imageInput">Choose an Image</label>
-        <input type="file" id="imageInput" accept="image/*">
+    <div class="row">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                <img class="rounded-circle mt-5" width="150px" src="${userProfile.imgPath}">
+                <span class="font-weight-bold">${userPetProfile.name}</span>
+                <span class="text-black-50">${userPetProfile.species}</span>
+            </div>
+        </div>
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Pet Profile Settings</h4>
+                </div>
+                <input type="hidden" name="userId" class="user-profile-input" value="${userProfile.userId}" />
+                <input id="userProfileImagePath" type="hidden" name="imgPath" class="user-profile-input" value="${userProfile.imgPath}" />
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <label class="labels">Name</label>
+                        <input type="text" name="firstName" class="form-control user-profile-input" placeholder="Enter Pet's name" value="${userProfile.firstName}" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="labels">Species</label>
+                        <input type="text" name="lastName" class="form-control user-profile-input" placeholder="Your pet is a..." value="${userProfile.species}" />
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="row mt-2 text-center">
+                        <div class="col-md"> <label class="labels">Profile Image</label></div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <input id="fileImageElemInput" type="file" name="fileImageElem" />
+                        </div>
+                        <div class="col-md-6">
+                            <button id="submitImageProfile" class="btn btn-custom" type="button">Save Image</button>
+                        </div>
+                    </div>
+                    <small id="status"></small>
+                    <div id="imagePreview"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <label class="labels">Breed</label>
+                        <input type="text" name="phoneNumber" class="form-control user-profile-input" placeholder="Enter breed" value="${userProfile.breed}">
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels">Gender</label>
+                        <input type="text" name="address" class="form-control user-profile-input" placeholder="Enter gender" value="${userProfile.gender}">
+                    </div>
+
+                    <div class="col-md-12">
+                        <label class="labels">Age</label>
+                        <input type="text" name="address" class="form-control user-profile-input" placeholder="Enter address age" value="${userProfile.age}">
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels">Personality</label>
+                        <input type="text" name="address" class="form-control user-profile-input" placeholder="Enter personality" value="${userProfile.personality}">
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels">Hobby</label>
+                        <input type="text" name="address" class="form-control user-profile-input" placeholder="Enter hobby" value="${userProfile.hobby}">
+                    </div>
+
+                    <div class="col-md-12">
+                        <label class="labels">Favourite Treat</label>
+                        <input type="text" name="address" class="form-control user-profile-input" placeholder="Enter favourite treat" value="${userProfile.FavouriteTreat}">
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 text-center">
+                <button id="saveProfile" class="btn profile-button custom-button btn-custom" type="button">Save Profile</button>
+            </div>
+        </div>
     </div>
+</div>
+</div>
 
-    <img id="uploadedImage" class="uploaded-image" src="" alt="Uploaded Image">
+<div class="display-6 text-center"  style="font-family: cursive; color: rgb(234, 141, 231)">Add a new photo of your pet!</div>
+<hr>
+<div class="image-upload-container">
+    <label class="image-upload-label" for="imageInput">Upload a new photo</label>
+    <input type="file" id="imageInput" accept="image/*">
+</div>
 
-    <script>
-        const imageInput = document.getElementById('imageInput');
-        const uploadedImage = document.getElementById('uploadedImage');
-
-        imageInput.addEventListener('change', function() {
-            const file = imageInput.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    uploadedImage.src = e.target.result;
-                };
-                reader.readAsDataURL(file);
-            }
-        });
-    </script>
+<img id="uploadedImage" class="uploaded-image" src="" alt="Uploaded Image">
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/javascript.js"></script>
 </body>
 </html>
 
